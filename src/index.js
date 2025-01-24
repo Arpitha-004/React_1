@@ -7,26 +7,6 @@
 //Morning = red, Afternoon = green, Night = blue.
 import React from "react";
 import ReactDOM from "react-dom";
-const dat = new Date();
-time = dat.getHours();
-let text;
-const customStyle = {
-  color: "",
-};
+import App from "./components/App";
 
-if (time < 12) {
-  text = "Good Morning";
-  customStyle.color = "red";
-} else if (time < 18) {
-  text = "Good Afternoon";
-  customStyle.color = "green";
-} else {
-  text = "Good Night";
-  customStyle.color = "blue";
-}
-ReactDOM.render(
-  <h1 className="heading" style={customStyle}>
-    {text}
-  </h1>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
